@@ -45,7 +45,7 @@ String opcao="";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
-            String opcao = request.getParameter("opcao");
+            opcao = request.getParameter("opcao");
             idDev = request.getParameter("idDev");
             nomeDev = request.getParameter("nomeDev");
             descricao = request.getParameter("descricao");
@@ -115,7 +115,6 @@ String opcao="";
        desenvolvedora.setNomeDev(nomeDev);
        desenvolvedora.setDescricao(descricao);
        desenvolvedora.setCnpj(cnpj);
-       desenvolvedoraDao.alterar(desenvolvedora);
        desenvolvedoraDao.excluir(desenvolvedora);
         cancelar(request, response);
     }
